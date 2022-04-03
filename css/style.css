@@ -1,0 +1,59 @@
+/*
+Usar a font-family: 'Nunito', sans-serif;
+Para um visual mais agradavel
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(4, 108, 212);
+}
+
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Nunito', sans-serif;
+    padding-bottom: 160px;
+}
+
+#p1 {
+    
+    display: block;
+    font-size: 35px;
+    margin: 10px;
+    padding-left: 140px;
+    text-align: left;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 0px;
+}
+
+
+.inline-input input {
+    
+    background-color: white;
+    margin-left: 150px;
+    display: inline-block;
+    padding: 9px 90px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    outline: 0;
+    line-height: 1px;
+    
+}
+
+.inline-input button {
+
+    height: 50px;
+    background-color: blueviolet;
+    color: white;
+    font-size: 25px;
+    font-family: 'Nunito', sans-serif;
+    padding: 1px 22px;
+    border: 1px solid white;
+    border-radius: 8px;
+    
+    
+}
+
