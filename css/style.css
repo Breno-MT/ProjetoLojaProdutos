@@ -6,7 +6,7 @@ Para um visual mais agradavel
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(4, 108, 212);
+    background-color: rgb(62, 151, 206);
 }
 
 
@@ -47,10 +47,9 @@ h1 {
     
 }
 
-.inline-input button {
+.inline-input #btn-submit, #btn-deletarTudo {
 
-    
-    
+
     background-color: blueviolet;
     color: white;
     font-size: 20px;
@@ -63,3 +62,6 @@ h1 {
     
 }
 
+input[type=checkbox]:checked {
+    text-decoration: line-through;
+}
