@@ -33,6 +33,11 @@ function removeItem(id) {
 
 function removeAll() {
    
+    lista.splice(0, lista.length);
+    alert('Você deletou seus items da Lista!')
+
+    updateScreen();
+    saveStorage();
 }
 
 
