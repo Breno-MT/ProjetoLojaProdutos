@@ -2,6 +2,8 @@ var inputText = document.getElementById('produto');
 var btnDeleteAll = document.getElementById('btn-deletarTudo');
 var btnSubmit = document.getElementById('btn-submit');
 var ul = document.getElementById('lista');
+// Esse p2, está na Div "div-total", vai ser usado para mostrar o valor total.
+var p2 = document.getElementById('p2')
 
 
 
@@ -34,7 +36,7 @@ function removeItem(id) {
 function removeAll() {
    
     lista.splice(0, lista.length);
-    alert('Você deletou seus items da Lista!')
+    alert('Você deletou seus itens da Lista!')
 
     updateScreen();
     saveStorage();
@@ -69,6 +71,8 @@ function updateScreen() {
         li.appendChild(btnX);
         ul.appendChild(li);
     })
+
+
 }
 
 

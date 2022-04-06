@@ -65,3 +65,15 @@ h1 {
 input[type=checkbox]:checked {
     text-decoration: line-through;
 }
+
+.div-total {
+    display: grid;
+    font-size: 25px;
+    margin: 10px;
+    padding-top: 5%;
+    padding-left: 70%;
+    text-align: center;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 0px;
+}
