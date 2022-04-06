@@ -35,6 +35,12 @@ function removeAll() {
    
 }
 
+
+function changePrice() {
+    
+}
+
+
 function updateScreen() {
     ul.innerHTML = '';
     
