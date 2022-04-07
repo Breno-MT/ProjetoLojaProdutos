@@ -26,5 +26,5 @@
   - quiser, não tem limite de produto, a página e o resultado final irá te acompanhar.
 
 ---
-####  Meus produtos vão ser salvos?
+####  🤔 Meus produtos vão ser salvos?
   - Sim!!! Mesmo que você dê F5 na página, tenha caido a internet no meio do processo, ele irá ficar salvo no seu navegador caso você retorne mais tarde. Ou precise sair.
