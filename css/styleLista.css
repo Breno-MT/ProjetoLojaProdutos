@@ -1,0 +1,9 @@
+#lista {
+
+    color: white;
+    font-size: 15px;
+    font-family: 'Nunito', sans-serif;
+    list-style-type: none;
+    margin: 100px;
+    padding-left: 50px;
+}

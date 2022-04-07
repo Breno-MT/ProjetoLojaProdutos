@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/styleLista.css">
     <link rel="shortcut icon" href="./favicon1.ico" type="image/x-icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,20 +20,36 @@
         <h1>Loja de Produtos!</h1>
     </header>
 
+    <div class="div-grid">
 
-    <div class="inline-input">
-        <p id="p1">Insira o nome do Produto</p>
-        <input id='produto' type="text" placeholder="Nome do Produto">
-        <button id="btn-submit">Inserir</button>
-        <button id="btn-deletarTudo">Deletar Tudo</button>
+        
+        <div class="inline-input">
+            <p id="p1">Insira o nome do Produto</p>
+            <input id='produto' name="produto" type="text" placeholder="Nome do Produto">
+            <button id="btn-submit">Inserir</button>
+            <button id="btn-deletarTudo">Deletar Tudo</button>
+            <button id="btn-deletarMarcado">Deletar Todos Marcados</button>
+            
+        </div>
+
+        <hr>
+        
+        <div class="div-total">
+            <h2 id="h2">Total R$</h2>
+            <p id="p2"></p>
+            <hr>
+        </div>
+
     </div>
    
-    
+    <div class="div-lista">
+        <ul id="lista"></ul>
+    </div>
     
 
 
-    <footer >
-        <script src="/js/main.js" type="module"></script>
+    <footer>
+        <script src="/js/main.js"></script>
     </footer>
 </body>
 </html>

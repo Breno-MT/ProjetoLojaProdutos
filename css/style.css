@@ -6,7 +6,7 @@ Para um visual mais agradavel
 * {
     margin: 0;
     padding: 0;
-    background-color: rgb(4, 108, 212);
+    background-color: rgb(62, 151, 206);
 }
 
 
@@ -47,10 +47,9 @@ h1 {
     
 }
 
-.inline-input button {
+.inline-input #btn-submit, #btn-deletarTudo, #btn-deletarMarcado {
 
-    
-    
+
     background-color: blueviolet;
     color: white;
     font-size: 20px;
@@ -59,7 +58,36 @@ h1 {
     padding-top: 2px;
     border: 1px solid white;
     border-radius: 8px;
+    cursor: pointer;
     
     
 }
 
+.inline-input #btn-submit, #btn-deletarTudo, #btn-deletarMarcado {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.inline-input #btn-submit:hover, #btn-deletarTudo:hover, #btn-deletarMarcado:hover {
+    background-color: rgba(0, 248, 157, 0.5)
+}
+
+
+input[type=checkbox]:checked {
+    text-decoration: line-through;
+    border-radius: 3px;
+}
+
+.div-total {
+
+    display: grid;
+    font-size: 25px;
+    margin: 10px;
+    padding-top: 5%;
+    padding-left: 70%;
+    text-align: center;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    margin-bottom: 0px;
+    
+}
