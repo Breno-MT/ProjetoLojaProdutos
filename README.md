@@ -1,7 +1,6 @@
 # Projeto Loja Produtos 🛒
   - Por que eu deveria utilizar este projeto para ver minhas compras?
-  - Simples, ele é fácil, prático e dinâmico. O que você precisa fazer é inserir seu produto e o seu valor, é útil em casos que você precisa ter uma base
-  - de quanto irá gastar no mercado, com jogos, roupas e etc...
+  - Simples, ele é fácil, prático e dinâmico. O que você precisa fazer é inserir seu produto e o seu valor, é útil em casos que você precisa ter uma base de quanto irá     - gastar no mercado, com jogos, roupas e etc...
   - Leia abaixo as dúvidas que podem surgir sobre o site! Obrigado :D
 ---
 
