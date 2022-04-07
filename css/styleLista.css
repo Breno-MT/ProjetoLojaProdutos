@@ -1,9 +1,38 @@
 #lista {
 
     color: white;
-    font-size: 15px;
+    font-size: 25px;
     font-family: 'Nunito', sans-serif;
     list-style-type: none;
     margin: 100px;
     padding-left: 50px;
+}
+
+input {
+    cursor: pointer;
+    margin: 10px;
+}
+
+/*
+Button é o X,
+input é a checkbox!
+*/
+
+button {
+    cursor: pointer;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    font-family: 'Nunito', sans-serif;
+    border: 1px solid white;
+    border-radius: 8px;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-bottom: 2px;
+    cursor: pointer;    
+    
+}
+
+button:hover {
+    background-color: rgba(243, 37, 37, 0.985)
 }
