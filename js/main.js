@@ -44,9 +44,13 @@ function updateScreen() {
         checkbox.type = 'checkbox';
         
         checkbox.onclick = function () {
-            itemMarcado(item,checkbox.checked);
+            itemMarcado(item, checkbox.checked);
 
+
+            
+            
         }
+
         li.id = `i${item.id}`;
         li.innerHTML = item.name;
         
@@ -58,11 +62,12 @@ function updateScreen() {
 }
 
 function addItem() {
+    
     if(inputText.value) {
         lista.push({
             id: Date.now(),
             name: inputText.value,
-            price: null
+            price: null,
         });
 
         inputText.value = '';
@@ -99,16 +104,12 @@ function removeAll() {
 
 }
 
-function removeMarked () {
-    
-}
 
 function itemMarcado(item, status) {
 
-    if(status) {
+    if(status == true) {
         item.price = parseFloat(prompt('Digite o valor R$', '1.12'));
-        updateScreen();
-        saveStorage();
+
     }
 
     function total() {
