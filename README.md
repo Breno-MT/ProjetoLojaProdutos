@@ -14,7 +14,7 @@
   
   - O botão Inserir ✅ -> irá receber o nome do seu produto que você deseja cadastrar, ele não irá salvar nome vazio. E irá mostrar, uma lista, com uma checkbox e um botão X;
 
-  - O botão Deleter Tudo ⛔ -> vai deletar toda lista sem nenhum critério de avaliação.
+  - O botão Deletar Tudo ⛔ -> vai deletar toda lista sem nenhum critério de avaliação.
 
   - O botão Deletar Todos Marcados ⭕ -> Vai deletar somente os produtos que forem marcado pela sua checkbox!
   
