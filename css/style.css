@@ -47,7 +47,7 @@ h1 {
     
 }
 
-.inline-input #btn-submit, #btn-deletarTudo {
+.inline-input #btn-submit, #btn-deletarTudo, #btn-deletarMarcado {
 
 
     background-color: blueviolet;
@@ -67,6 +67,7 @@ input[type=checkbox]:checked {
 }
 
 .div-total {
+
     display: grid;
     font-size: 25px;
     margin: 10px;
@@ -76,4 +77,5 @@ input[type=checkbox]:checked {
     color: white;
     font-family: 'Nunito', sans-serif;
     margin-bottom: 0px;
+    
 }
