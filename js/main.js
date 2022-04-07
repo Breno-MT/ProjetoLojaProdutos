@@ -5,13 +5,8 @@ var btnSubmit = document.getElementById('btn-submit');
 var ul = document.getElementById('lista');
 
 
-
-
-
 // Esse p2, está na Div "div-total", vai ser usado para mostrar o valor total.
 var p2 = document.getElementById('p2');
-
-
 
 
 var lista = [];
@@ -50,7 +45,7 @@ function updateScreen() {
         
         checkbox.onclick = function () {
             itemMarcado(item,checkbox.checked);
-     
+
         }
         li.id = `i${item.id}`;
         li.innerHTML = item.name;
@@ -61,7 +56,6 @@ function updateScreen() {
     })
 
 }
-
 
 function addItem() {
     if(inputText.value) {
@@ -105,19 +99,34 @@ function removeAll() {
 
 }
 
-
-
-
+function removeMarked () {
+    
+}
 
 function itemMarcado(item, status) {
 
-    if(status === true) {
-        item.price = parseFloat(window.prompt('Digite o valor R$', '1.12'));
+    if(status) {
+        item.price = parseFloat(prompt('Digite o valor R$', '1.12'));
         updateScreen();
         saveStorage();
     }
 
+    function total() {
+
+        if(valorTotal = lista.map(preco => preco.price).reduce((acc, preco) => preco + acc, 0)) {
+
+            p2.innerHTML = `R$${valorTotal}`;
+            updateScreen();
+            saveStorage();
+        }
+    }
+
+    total();
+    updateScreen();
+    saveStorage();
 }
+
+
 
 
 

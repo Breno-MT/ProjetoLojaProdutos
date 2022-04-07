@@ -64,6 +64,7 @@ h1 {
 
 input[type=checkbox]:checked {
     text-decoration: line-through;
+    border-radius: 3px;
 }
 
 .div-total {
