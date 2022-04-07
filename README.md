@@ -18,9 +18,9 @@
   - O botão Deleter Tudo ⛔ -> vai deletar toda lista sem nenhum critério de avaliação.
 
   - O botão Deletar Todos Marcados ⭕ -> Vai deletar somente os produtos que forem marcado pela sua checkbox!
-  -  
-  - O botão X  ❌ -> ele tem a sua única função de retirar um produto de sua escolha, com valor ou sem valor, marcado ou não marcado, ele só irá retirar da lista.
-  - 
+  
+  - O botão ❌ -> ele tem a sua única função de retirar um produto de sua escolha, com valor ou sem valor, marcado ou não marcado, ele só irá retirar da lista.
+ 
   - Checkbox ✅ -> É um quadrado branco que irá marcar o produto comprado de sua escolha, irá aparecer um pop up para você inserir o seu valor, Ex.: 1.12 como vai aparecer.
   - Caso você marque, ele irá riscar o seu produto (vai ficar comprado), e mostrará na direita do site o valor total, ou seja, você pode colocar quantos produtos você
   - quiser, não tem limite de produto, a página e o resultado final irá te acompanhar.
