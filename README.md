@@ -12,8 +12,7 @@
   - Temos o botão Inserir, Deletar Tudo, Deletar Todos Marcados;
   - Pss!, use sua criatividade nos produtos! Não se limite a somente compras de mercado, use também boletos, roupas e o que você achar que for necessário 😁
   
-  - O botão Inserir ✅ -> irá receber o nome do seu produto que você deseja cadastrar, ele não irá salvar nome vazio. E irá mostrar,
-  - uma lista, com uma checkbox e um botão X;
+  - O botão Inserir ✅ -> irá receber o nome do seu produto que você deseja cadastrar, ele não irá salvar nome vazio. E irá mostrar, uma lista, com uma checkbox e um botão X;
 
   - O botão Deleter Tudo ⛔ -> vai deletar toda lista sem nenhum critério de avaliação.
 
