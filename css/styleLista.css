@@ -13,7 +13,6 @@ Aqui eu estou customizando a nossa lista para deixar mais agradavel
 
 /* Adicionando uma margem para dar espaço e deixando o cursor com pointer ao passar o mouse por cima */
 input {
-    cursor: pointer;
     margin: 10px;
 }
 
