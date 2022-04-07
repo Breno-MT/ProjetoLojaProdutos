@@ -50,7 +50,7 @@ function updateScreen() {
 
 
         var btnX = document.createElement('button');
-        btnX.innerHTML = 'x';
+        btnX.innerHTML = '❌';
         btnX.onclick = function () {
             removeItem(index);
             updateScreen();

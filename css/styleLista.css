@@ -26,7 +26,7 @@ Aqui eu estou customizando o nosso botão X para que fique mais agradavel
 */
 button {
     cursor: pointer;
-    background-color: blueviolet;
+    background-color: rgb(228, 59, 59);
     color: white;
     font-size: 20px;
     font-family: 'Nunito', sans-serif;
@@ -43,5 +43,5 @@ button {
 Colocado um hover para deixar bonito, irá mudar a cor do botão ao deixar o mouse em cima, ao retirar irá voltar a sua cor original
 */
 button:hover {
-    background-color: rgba(243, 37, 37, 0.985)
+    background-color: #e27e56;
 }
