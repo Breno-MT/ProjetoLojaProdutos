@@ -3,13 +3,19 @@ Usar a font-family: 'Nunito', sans-serif;
 Para um visual mais agradavel
 */
 
+
+/*
+Aqui eu estou zerando o body do html
+*/
 * {
     margin: 0;
     padding: 0;
     background-color: rgb(62, 151, 206);
 }
 
-
+/*
+O nosso header para ficar mais bonito
+*/
 h1 {
     text-align: center;
     color: rgb(255, 255, 255);
@@ -17,11 +23,17 @@ h1 {
     padding-bottom: 160px;
 }
 
-
+/*
+Colocando nossa div inline-input para ficar em forma de coluna
+*/
 .inline-input {
     flex-direction: column;
     
 }
+
+/*
+Customizando o nosso primeiro paragrafo (p1)
+*/
 .inline-input #p1{
     
     display: flex;
@@ -33,6 +45,9 @@ h1 {
     font-family: 'Nunito', sans-serif;
     margin-bottom: 0px;
 }
+/*
+Customizando o nosso terceiro paragrafo (p3)
+*/
 .inline-input #p3{
     
     display: flex;
@@ -46,9 +61,12 @@ h1 {
     
 }
 
+/*
+Customizando o inputText que o usuário irá escrever o nome do produto (linha 28 index.html)
+*/
 .inline-input input {
     
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     margin-left: 150px;
     display: inline-block;
     padding: 9px 90px;
@@ -59,6 +77,9 @@ h1 {
     
 }
 
+/*
+Customizando os botões para deixar agradavel
+*/
 .inline-input #btn-submit, #btn-deletarTudo, #btn-deletarMarcado {
 
 
@@ -75,11 +96,17 @@ h1 {
     
 }
 
+/*
+Customizando os botões para deixar com uma sombra neles
+*/
 .inline-input #btn-submit, #btn-deletarTudo, #btn-deletarMarcado {
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
 }
 
+/*
+Adicionado um hover para mudar de cor ao passar o mouse por cima
+*/
 .inline-input #btn-submit:hover, #btn-deletarTudo:hover, #btn-deletarMarcado:hover {
     background-color: rgba(0, 248, 157, 0.5)
 }
@@ -90,6 +117,9 @@ input[type=checkbox]:checked {
     border-radius: 3px;
 }
 
+/*
+Customizando a div que irá mostrar a soma total dos produtos, inclui o h2 e p2 (linha 40, 41 do index.html)
+*/
 .div-total {
 
     display: grid;
