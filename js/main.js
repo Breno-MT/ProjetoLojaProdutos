@@ -17,6 +17,7 @@ var ul = document.getElementById('lista');
 // Esse p2, está na Div "div-total" linha 41, vai ser usado para mostrar o valor total.
 var p2 = document.getElementById('p2');
 
+
 // Criando uma nova lista
 var lista = [];
 // guardando a lista se tiver item num localStorage, e transformado em JSON caso tenha item nele
@@ -53,16 +54,13 @@ function updateScreen() {
         
         var checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
+
         
         checkbox.onclick = function () {
-
-            itemMarcado(item, checkbox.checked);
-
-
             
+            itemMarcado(item, checkbox.checked);
+             
         }
-
-
         li.id = `i${item.id}`;
         li.innerHTML = item.name;
         
@@ -75,8 +73,12 @@ function updateScreen() {
 
 // Nesta função, está sendo feito a adição de item no nosso Array de Objetos
 function addItem() {
-    
+
+
     if(inputText.value) {
+
+        
+
         lista.push({
             id: Date.now(),
             name: inputText.value,
@@ -124,7 +126,6 @@ function itemMarcado(item, status) {
 
     if(status == true) {
         item.price = parseFloat(prompt('Digite o valor R$', '1.12'));
-
         updateScreen();
         saveStorage();
 
@@ -134,17 +135,20 @@ function itemMarcado(item, status) {
     function total() {
 
         if(valorTotal = lista.map(preco => preco.price).reduce((acc, preco) => preco + acc, 0)) {
-
-            p2.innerHTML = `R$${valorTotal}`;
+            
+            p2.innerHTML = valorTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2});;
             updateScreen();
             saveStorage();
+
         }
     }
+
 
     total();
     updateScreen();
     saveStorage();
 }
+
 
 // Adicionando addEventListener pros botões, ou seja, dando vida para eles :D
 btnSubmit.addEventListener('click', addItem);
