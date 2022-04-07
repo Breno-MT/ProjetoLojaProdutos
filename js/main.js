@@ -41,11 +41,18 @@ function updateScreen() {
     
     ul.innerHTML = '';
     
-    lista.forEach(function (item) {
+    var totalItens = 0;
+
+    lista.forEach(function (item, index) {
+
+        totalItens += item.price;
+        
+
+
         var btnX = document.createElement('button');
         btnX.innerHTML = 'x';
         btnX.onclick = function () {
-            removeItem(item.id);
+            removeItem(index);
             updateScreen();
             saveStorage();
         }
@@ -54,20 +61,29 @@ function updateScreen() {
         
         var checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
+        checkbox.checked = item.price ? "checked" : ""; 
 
         
         checkbox.onclick = function () {
             
-            itemMarcado(item, checkbox.checked);
-             
+            itemMarcado(item.id, item.name, item.price, index);
+            
         }
+
+
         li.id = `i${item.id}`;
         li.innerHTML = item.name;
+
+
+        li.style.textDecoration = item.price ? 'line-through': ""
         
         li.appendChild(checkbox);
         li.appendChild(btnX);
         ul.appendChild(li);
     })
+
+    
+    p2.innerHTML = totalFormatado(totalItens);
 
 }
 
@@ -77,18 +93,16 @@ function addItem() {
 
     if(inputText.value) {
 
-        
-
         lista.push({
             id: Date.now(),
             name: inputText.value,
-            price: null,
+            price: false,
         });
 
         inputText.value = '';
 
-        updateScreen();
         saveStorage();
+        updateScreen();
 
     } else {
         alert("Insira o nome do produto!")
@@ -97,16 +111,7 @@ function addItem() {
 
 // Ira tirar o item especifico que tenha o botão X do lado
 function removeItem(id) {
-    var novaLista = [];
-    
-    lista.forEach(function (item) {
-        if (item.id !== id) {
-            novaLista.push(item)
-        }
-    })
-    
-    lista = novaLista;
-    updateScreen();
+    lista.splice(id, 1)
 }
 
 // Como diz, irá remover todos os itens da lista.
@@ -122,34 +127,69 @@ function removeAll() {
 
 
 // Caso algum item seja marcado pelo checkbox, irá aparecer um prompt e pedir o valor do item e somar no valor total (leia a linha 17 index.html)
-function itemMarcado(item, status) {
+function itemMarcado(id, nome, price, index) {
 
-    if(status == true) {
-        item.price = parseFloat(prompt('Digite o valor R$', '1.12'));
-        updateScreen();
-        saveStorage();
+    if(price == false) {
+        price = window.prompt('Digite o valor R$', '1.12');
+        
+        if(!isNaN(price) && price > 0) {
 
-    }
-
-    // Esta função irá pegar os itens que tem valor na lista e irá somar, caso tenha 2 itens de 5 com valor, irá somar somente os 2. 
-    function total() {
-
-        if(valorTotal = lista.map(preco => preco.price).reduce((acc, preco) => preco + acc, 0)) {
-            
-            p2.innerHTML = valorTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2});;
-            updateScreen();
-            saveStorage();
-
+            var produto = {
+                "id": id,
+                "name": nome,
+                "price": Number(price),
+            }
         }
+        lista.splice(index, 1, produto);
+        saveStorage();
+        updateScreen();
+
+    } else {
+        
+        var produto = {
+            "id": id,
+            "name": nome,
+            "price": false,
+        }
+
+        lista.splice(index, 1, produto);
+        saveStorage();
+        updateScreen();
     }
 
-
-    total();
-    updateScreen();
-    saveStorage();
 }
 
+// Esta função irá pegar os itens que tem valor na lista e irá somar, caso tenha 2 itens de 5 com valor, irá somar somente os 2. 
+function totalFormatado(total) {
+
+    // if(valorTotal = lista.map(preco => preco.price).reduce((acc, preco) => preco + acc, 0)) {
+        
+    //     p2.innerHTML = valorTotal.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2});;
+    //     updateScreen();
+    //     saveStorage();
+
+    // }
+
+    return p2.innerHTML = total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2});
+
+}
+
+updateScreen();
+saveStorage();
+
+function removeMarked() {
+    for (let i = lista.length - 1; i >= 0; i--) {
+        if(lista[i].price != false) {
+            removeItem(i)
+        }
+    }
+}
 
 // Adicionando addEventListener pros botões, ou seja, dando vida para eles :D
 btnSubmit.addEventListener('click', addItem);
 btnDeleteAll.addEventListener('click', removeAll);
+btnDeleteMarked.addEventListener('click', () => {
+    removeMarked();
+    saveStorage();
+    updateScreen()
+});
