@@ -75,7 +75,7 @@ function updateScreen() {
         li.innerHTML = item.name;
 
 
-        li.style.textDecoration = item.price ? 'line-through': ""
+        li.style.textDecoration = item.price ? 'line-through': "";
         
         li.appendChild(checkbox);
         li.appendChild(btnX);
